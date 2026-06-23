@@ -102,7 +102,7 @@ it should now build and install to the i2p/inspircd directory
 From here you'll want to 
 cd into i2p/inspircd/run/conf/examples
 
-cp inspircd.example.conf to inspircd.conf
+cp inspircd.example.conf to /home/YourUserHere/i2p/inspircd/run/conf/inspircd.conf
 
 then edit that file, or alternatively you can use the file I provide to get a working config in seconds. Add that file to /home/YourUserHere/i2p/inspircd/run/conf
 
