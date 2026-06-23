@@ -3,4 +3,4 @@ An Arch Linux guide that covers a quick install of I2P (Java) and how to set up 
 
 More coming soon, I will man the text editor and get to work shortly ;) 
 
-You can find the initial write-up in main.txt. It's not in a finished state as of yet as its missing two key elements
+Install Guide should now hopefully be completed. I will attempt a test run of it later on a machine where not currently installed
