@@ -42,6 +42,8 @@ First we'll download our i2p.jar for our platform (Linux), this may save to Down
 
 Now we open up terminal and install our "jre-openjdk" (This allows us to install the i2p.jar file we just downloaded)
 
+"sudo pacman -S jre-openjdk"
+
 now we want to go to our Downloads (or wherever you saved the file) and left click our .jar file we downloaded
 
 a gui should now appear in which you can install, all defaults are fine, it should install to I2P in our home directory (example... /home/Your UserHere/i2p)
