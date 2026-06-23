@@ -1,0 +1,96 @@
+So you have been thinking of ditching Discord? Maybe you have reviewed the options, Matrix, XMPP, maybe some others. 
+
+Maybe the compleixity from Matrix is overwhelming for you to piece together for a working server? Maybe you don't want to configure what many would deem to be unecessary features that Matrix depends on or has set by default? 
+
+Okay, hear me out, Maybe, just maybe,  you, like I, want a quick install where you can sit coffee poured and get to installing the few packages required and making a quick config and tunnel so your buddies can join your messaging server to share MemZ and StuFf ;)
+
+Today comrade, we are introducing 1988 technology in the form of a (still maintained BTW) 2002 project by the name of inspIRCd, or as most call it, IRC. Where we will route and build our very own tunnel within the I2P network, which makes for a truly better alternative to Tor, that is not one big giant honey pot for the CIA/FBI and makes for a better alternative to Matrix for those looking for one of the quicker ways to get a messaging server up and running quickly. 
+
+Hope you got that coffee poured (or whatever you drink of choice)
+
+Lets get into the contents, 
+
+What you will need 
+
+Terminal commands and config: 
+
+"git" (so we can gitclone for building inspircd from source)
+
+"jre-openjdk" (Required for i2p java. As a sidenote, if you play a lot of Minecraft with mods, you may already have this installed :P )
+
+"inspircd" (Our IRC backend, you can either build from source or use the AUR, though word of warning AUR is not secure after numerous malware attacks, this guide will recommend a build from source and I can walk you through the basic setup :) 
+
+"Inspircd.conf" (The install from source includes an example config, "inspircd.example.conf" you can edit this file and rename, but if that's to much for you, I'll leave you the necessary commands which enables inspircd for you. 
+
+Chromium or Firefox (You don't want to proxy into i2p from your main browser that you do banking through, emailing, anything personal of the sorts, etc, so think of this extra browser as an isolated instance from your primary web browser. 
+
+and lastly,
+
+Web Download: 
+
+i2p (of course, from their official website here.... https://i2p.net/en/downloads/
+
+
+
+Start Guide here. (All commands with quotations are assumed to be entered without the appened quotations
+
+I2P (Setup):
+
+First we'll download our i2p.jar for our platform (Linux), this may save to Downloads by default, this is good. 
+
+Now we open up terminal and install our "jre-openjdk" (This allows us to install the i2p.jar file we just downloaded)
+
+now we want to go to our Downloads (or wherever you saved the file) and left click our .jar file we downloaded
+
+a gui should now appear in which you can install, all defaults are fine, it should install to i2p in our home directory (example... /home/usernamehere/i2p)
+
+If you want to do a test run now to make sure i2p works, you can 
+
+cd i2p
+
+./iprouter start
+
+and this should start i2p and often times will open whatever your default browser is. We established earlier this browser is not to be used, instead opting for our isolated browser for security. 
+
+inorder to browse sites in i2p we now need to setup what will be our http proxy so we can directly interface with the i2p network (browse sites, etc), to do this we will need our secondary browser
+
+Chromium and Firefox are the common ones, this guide will provide you the command you need to proxy, which is....  
+
+chromium --proxy-server=127.0.0.1:4444
+
+This command should open your web browser and if all is well you will be met with a setup screen where it will ask you configure your share rates for network bandwidth (i2p is a peer 2 peer network), set whatever you feel reasonable and you'll then be greeted with your router home page, where you can do thngs ranging from tunnel config, access the search indexer "notbob.i2p" and other powerful features. 
+
+On the topic of bob, lets see if his address will load when we try to load the page. If it loads, great your tunnels should be configured and your i2p install is good to go < 3. 
+
+if not then you'll need to refer to the troubleshoot or FaQ guides of I2P as the list of troubleshoot steps can vary from system to system. 
+
+We'll come back to I2P a little later on in the the final portion of this guide where we setup our tunnel via The Hidden Services tab so we can allow our fellow comrades (friends) to join via our .b32 address destination.
+
+
+Inspircd (Setup)
+
+To keep everything together in one place you'll want to git clone from terminal in your i2p folder. 
+
+cd i2p
+
+git clone https://github.com/inspircd/inspircd
+
+now cd into inspircd
+
+cd inspircd
+
+now we will want to configure this prior to building 
+
+./configure
+
+it will warn you about using a dev build, I'm lazy and ignored the warning, Don't be me ;)
+
+You'll want to go through the prompts, where is lists file directories, you will want to change these to /home/YourUserHere/i2p/inspircd/run/bin
+
+changing the first line with the i2p inspircd directory will update the directories that follow so you can just mash enter on the rest without manual adjustment
+
+Once configured you can now build the application, a useful tag to add when using make is the -j followed by your cpu cores and thread (for 16 core cpus typically you'll have 16 threads)
+
+make -j32 install
+
+it should now build and install to the i2p/inspircd directory
