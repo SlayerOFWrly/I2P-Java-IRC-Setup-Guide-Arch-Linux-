@@ -1,0 +1,26 @@
+# Nickname				Removes personal identifiable information
+
+/set nick <NameHere>
+
+/set real_name <NameHere>
+
+/set user_name <NameHere>
+
+
+# Security, 				Prevents users from making requests to your client and thus potentially leaking sensitive information
+
+/ignore * DCC CTCPS
+
+
+# Server name,
+					Local IP and Port, as well as a Dissallow of SSL as encryption is handled by I2P network which is multilayer
+/network add IRC-I2P
+
+/server add -network IRC-I2P -disallow_starttls 127.0.0.1 6667 #Links to the network we saved, disables SSL and saves our local IP and Port
+
+
+#Connecting,
+
+/connect IRC-I2P
+
+/join #IRC-I2P	
