@@ -1,0 +1,5 @@
+This is a useful command (local server proxy) for accessing I2P services from your server to a system that does not have I2P installed, you should be able to use all the features of I2P without ever installing to your local system :)
+
+
+
+ssh -f -N -L 7657:127.0.0.1:7657 -f -N -L 4444:127.0.0.1:4444 -f -N -L 9000:127.0.0.1:9000 UserNameHere@192.168.x.x
