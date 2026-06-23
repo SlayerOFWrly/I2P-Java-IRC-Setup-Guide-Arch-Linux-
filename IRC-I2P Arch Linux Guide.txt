@@ -136,6 +136,8 @@ Target: 127.0.0.1
 
 Port: 6667
 
+And lastly, make sure SSL is unticked
+
 We can now hit save
 
 And for good measure stop and start this new tunnel just to make sure it initializes
