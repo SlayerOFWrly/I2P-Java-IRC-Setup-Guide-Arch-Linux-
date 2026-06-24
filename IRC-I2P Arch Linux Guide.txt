@@ -155,6 +155,7 @@ You should wait 2-5 minutes for the tunnels to build, and voila, all your friend
 As for performance, there is quite a bit of latency but not unbearable, takes a second or two between each message. But it has the bestest feature of them all, yes this 1988, 2002 hybrid dinosaur tech does what modern companies cannot, there are no logs, zero, nada, once you disconnect and end your chat, there is no recovering that chat history, total peace of mind.
 
 Lastly Here are the sources that helped me to better understand the process, some already linked in this Guide, but here is the short list bundled together 
+if you encounter any issues following this guide, please open an issue on the github page or send us an email onto the address linuxlarp@proton.me and we'll do our best to help.
 
 https://github.com/cons0le7/irc2p-irssi/tree/main
 
