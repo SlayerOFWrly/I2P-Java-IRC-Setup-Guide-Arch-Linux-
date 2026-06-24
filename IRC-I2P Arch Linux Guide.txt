@@ -163,3 +163,5 @@ https://docs.inspircd.org/4/configuration/
 https://hackforums.net/showthread.php?tid=6326813
 
 https://cdn.loveandlemons.com/wp-content/uploads/2025/05/iced-coffee-recipe.jpg
+
+https://i2p.net/en/docs/guides/browser-config/
