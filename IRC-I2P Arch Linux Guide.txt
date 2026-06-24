@@ -59,7 +59,7 @@ and this should start i2p and often times will open whatever your default browse
 inorder to browse sites in i2p we now need to setup what will be our http proxy so we can directly interface with the i2p network (browse sites, etc), to do this we will need our secondary browser
 
 Chromium and Firefox are the common ones, this guide will provide you the chromium command (enter in terminal) in which you will need to be able to proxy, which is....  
-
+as a sidenote, some chromium based browsers may have a proxy settings page in the settings menu, so search if your chromium based browser has a proxy settings page if you want to avoid using the command to launch chromium with a custom proxy
 chromium --proxy-server=127.0.0.1:4444
 
 for firefox go to about:preferences#connectionSecurity click on Configure Proxy choose manual proxy configuration. enter 127.0.0.1 as the http proxy and 4444 as the port. save the settings and firefox should be able to access the i2p network
