@@ -62,6 +62,8 @@ Chromium and Firefox are the common ones, this guide will provide you the chromi
 
 chromium --proxy-server=127.0.0.1:4444
 
+for firefox go to about:preferences#connectionSecurity click on Configure Proxy choose manual proxy configuration. enter 127.0.0.1 as the http proxy and 4444 as the port. save the settings and firefox should be able to access the i2p network
+
 This command should open your web browser and if all is well you will be met with a setup screen where it will ask you configure your share rates for network bandwidth (i2p is a peer 2 peer network), set whatever you feel reasonable and you'll then be greeted with your router home page, where you can do thngs ranging from tunnel config, access the search indexer "notbob.i2p" and other powerful features. 
 
 On the topic of bob, lets see if his address will load when we try to load the page. If it loads, great your tunnels should be configured and your i2p install is good to go. If it fails to load give it a minute or 2 so it can explore the tunnels needed for connection < 3. 
