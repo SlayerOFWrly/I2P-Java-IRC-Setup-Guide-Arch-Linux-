@@ -126,6 +126,8 @@ Hopefully you can connect and join a room :).
 
 Unrealircd (Setup)
 
+(As an extra addition here, @Kryst has put together their UnrealIRCd install guide. UnrealIRCd can be used as an alternative server backend similar in functionality to InspirIRCd for those opting not to use inspIRCd)
+
 Download unrealircd using the Arch Linux Extra Repository
 
 sudo pacman -S unrealircd
@@ -194,6 +196,6 @@ https://docs.inspircd.org/4/configuration/
 
 https://hackforums.net/showthread.php?tid=6326813
 
-https://cdn.loveandlemons.com/wp-content/uploads/2025/05/iced-coffee-recipe.jpg
-
 https://i2p.net/en/docs/guides/browser-config/
+
+https://cdn.loveandlemons.com/wp-content/uploads/2025/05/iced-coffee-recipe.jpg
