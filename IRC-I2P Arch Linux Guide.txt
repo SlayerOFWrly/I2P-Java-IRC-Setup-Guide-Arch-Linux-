@@ -136,6 +136,21 @@ sudo nano /etc/unrealircd/unrealircd.conf
 
 and copy the unrealircd.conf and enter your cloak keys and passwords. (Coming Soon)
 
+To remove tls enter
+
+sudo nano /etc/unrealircd/modules.default.conf
+
+and comment out
+
+#loadmodule "starttls";
+#loadmodule "sts";
+#loadmodule "tls_cipher";
+#loadmodule "tls_antidos";
+
+you will still need a self signed certificate
+
+Run 'make pem && make install' in the /etc/unrealircd directory to generate a self-signed cert.
+
 just launch unrealircd from the terminal
 
 I2P Tunnel Configuration: The final Piece Of This Puzzle. 
