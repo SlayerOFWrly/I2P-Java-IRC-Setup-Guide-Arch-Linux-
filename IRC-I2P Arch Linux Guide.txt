@@ -110,6 +110,8 @@ then edit that file, or alternatively you can use the file I provide to get a wo
 
 here is what I added to mine (refer to inspircd.conf in the included guide repo for further information). the inspircd documentation provides good insight into the commands you may want to add, but for now a basic config should work. Should be as simple as drag and drop into your conf folder.
 
+one important i2p note for unrealircd/inspircd users: make sure your listen blocks are bound to 127.0.0.1 instead of * so the server is only reachable through the i2p tunnel and not exposed directly to the internet
+
 so from here you will probably want to test whether or not inspircd starts, to do this you will want to cd into the inspircd/run directory
 
 cd /home/YourUserHere/i2p/inspircd/run
@@ -121,6 +123,20 @@ if you see no error output from your terminal, she should be up and running.
 To confirm, I recommend "irssi" and will provide the config file in this repo with the commands on how to connect which I slightly adapted from "cons0le7" on github (https://github.com/cons0le7/irc2p-irssi/tree/main)
 
 Hopefully you can connect and join a room :).
+
+Unrealircd (Setup)
+
+Download unrealircd using the Arch Linux Extra Repository
+
+sudo pacman -S unrealircd
+
+now edit the config file
+
+sudo nano /etc/unrealircd/unrealircd.conf
+
+and copy the unrealircd.conf and enter your cloak keys and passwords. (Coming Soon)
+
+just launch unrealircd from the terminal
 
 I2P Tunnel Configuration: The final Piece Of This Puzzle. 
 
